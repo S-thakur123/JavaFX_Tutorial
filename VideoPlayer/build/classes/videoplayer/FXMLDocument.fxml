@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<!--<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+-->
+<!--<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="videoplayer.FXMLDocumentController">
+    <children>
+        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
+        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+    </children>
+</AnchorPane>-->
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="videoplayer.FXMLDocumentController">
+    <center>
+        <MediaView fx:id="mediaView" fitWidth="800" fitHeight="450" />
+    </center>
+
+    <bottom>
+        <VBox>
+            <Slider fx:id="progressSlider" prefWidth="800"/>
+            <HBox spacing="10" alignment="center" style="-fx-padding: 10;">
+                <Button text="▶ Play" onAction="#handlePlay"/>
+                <Button text="⏸ Pause" onAction="#handlePause"/>
+                <Button text="⏹ Stop" onAction="#handleStop"/>
+                <Button text="⛶ Full Screen" onAction="#handleFullscreen"/>
+                <Button text="📂 Open" onAction="#handleOpen"/>
+                <!--<Button text="➕ Add to Playlist" onAction="#addToPlaylist"/>-->
+                <Button text="⏮ Prev" onAction="#handlePrevious"/>
+                <Button text="⏭ Next" onAction="#handleNext"/>
+                <Slider fx:id="volumeSlider" prefWidth="150"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
